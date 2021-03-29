@@ -9,13 +9,21 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-jobs:
-- job: A
-  steps:
-  - script: echo "job A"
-  condition: and(true, false)
+stages:
+- stage: A
+  jobs:
+  - job: A1
+    steps:
+    - script: echo "job A1"
+    condition: and(true, false)
 
-- job: B
-  dependsOn: A
-  steps:
-  - script: echo "job B"
+  - job: A2
+    dependsOn: A1
+    steps:
+    - script: echo "job B"
+    
+- stage: B
+  jobs:
+  - job: B1
+    steps:
+    - script: echo "Stage B job B1"
