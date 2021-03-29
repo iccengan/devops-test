@@ -12,7 +12,7 @@ pool:
 jobs:
 - job: A
   steps:
-  - script: echo "job A"
+  - script: exit 1
 
 - job: B
   dependsOn: A
