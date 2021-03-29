@@ -12,7 +12,8 @@ pool:
 jobs:
 - job: A
   steps:
-  - script: exit 1
+  - script: echo "job A"
+  condition: and(true, false)
 
 - job: B
   dependsOn: A
