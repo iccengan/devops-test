@@ -13,10 +13,10 @@ pool:
 
 steps:
 - script: |
-    echo "Hello, world!"
-    echo "##[error]Hello, world2!"
-    echo "Hello, world3!" >&2
-  displayName: 'Run a one-line script'
+    echo "Hello, world! 111"
+    echo "##[error]Hello, world! 222"
+    echo "Hello, world! 333" >&2
+  displayName: 'Run a hello-world script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
