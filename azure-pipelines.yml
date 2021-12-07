@@ -15,7 +15,7 @@ steps:
 - script: |
     echo "Hello, world!"
     echo "##[error]Hello, world2!"
-    echo "Hello, world3!" 2>&1
+    echo "Hello, world3!" >&2
   displayName: 'Run a one-line script'
 
 - script: |
