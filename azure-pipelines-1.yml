@@ -14,7 +14,7 @@ stages:
   jobs:
   - job: A1
     steps:
-    - script: exit 1
+    - script: sleep 70
     # condition: and(true, false)
 
   - job: A2
